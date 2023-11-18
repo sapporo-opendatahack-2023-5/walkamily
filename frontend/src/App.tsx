@@ -1,34 +1,41 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { SpotMapTemplate } from './features/spot_map/components/SpotMapTemplate';
+import { Spot } from './features/types/Spot';
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const spots: Spot[] = [
+    {
+      id: crypto.randomUUID(),
+      name: "大通公園",
+      points: 400,
+      steps: 3000,
+      location: {
+        latitude: 0,
+        longitude: 0
+      }
+    },
+    {
+      id: crypto.randomUUID(),
+      name: "平岸公園",
+      points: 500,
+      steps: 4000,
+      location: {
+        latitude: 0,
+        longitude: 0
+      }
+    },
+    {
+      id: crypto.randomUUID(),
+      name: "百合が原公園",
+      points: 300,
+      steps: 5000,
+      location: {
+        latitude: 0,
+        longitude: 0
+      }
+    }
+  ]
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <SpotMapTemplate spots={spots} />
   )
 }
 
