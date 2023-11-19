@@ -9,7 +9,7 @@ export const SelectedSpot: React.FC<SelectedSpotProps> = ({ spot }) => {
     return (
         <div className="flex justify-between items-center self-stretch">
             {/* 左カラム */}
-            <div className="flex flex-col items-start gap-1" style={{ maxWidth: "8.5rem" }}>
+            <div className="flex flex-col items-start gap-1">
                 {/* スポット名 */}
                 <h1 className="text-white font-sans font-normal" style={{
                     fontSize: "2rem",
@@ -29,7 +29,6 @@ export const SelectedSpot: React.FC<SelectedSpotProps> = ({ spot }) => {
                         {spot.steps}
                     </div>
                 </div>
-
             </div>
             {/* 右カラム：ポイント */}
             <div className="flex flex-col items-center">
@@ -45,7 +44,6 @@ export const SelectedSpot: React.FC<SelectedSpotProps> = ({ spot }) => {
                     points
                 </div>
             </div>
-            <Button>スタート！</Button>
         </div>
     )
 }
