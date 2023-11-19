@@ -1,5 +1,4 @@
 import { Spot } from "../../types/Spot";
-import { Button } from "../../ui/components/button/Button";
 
 type SelectedSpotProps = {
     spot: Spot;
