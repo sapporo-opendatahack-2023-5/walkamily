@@ -9,7 +9,7 @@ dependencies:
     specifier: ^0.8.0
     version: 0.8.0
   '@googlemaps/react-wrapper':
-    specifier: ^1.1.35
+    specifier: ^1.1.35https://github.com/sapporo-opendatahack-2023-5/walkamily/pull/5/conflict?name=frontend%252Fsrc%252FApp.tsx&ancestor_oid=17ed81100565aa9518d4c69e76fe40f87531c839&base_oid=9ed612a34d003141d616c5be29d6d7345cfcbc08&head_oid=1d84375dec0950c706bb324f6ca93daa4f987a2b
     version: 1.1.35(react@18.2.0)
   '@react-google-maps/api':
     specifier: ^2.19.2
