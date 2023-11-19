@@ -29,8 +29,8 @@ function App() {
       points: 300,
       steps: 5000,
       location: {
-        latitude: 0,
-        longitude: 0
+        latitude: 43.1281718,
+        longitude: 141.364969
       }
     }
   ]
