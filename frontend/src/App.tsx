@@ -9,18 +9,19 @@ function App() {
       points: 400,
       steps: 3000,
       location: {
-        latitude: 0,
-        longitude: 0
+        latitude: 43.0598309
+        ,
+        longitude: 141.347055
       }
     },
     {
       id: crypto.randomUUID(),
-      name: "平岸公園",
+      name: "中島公園",
       points: 500,
       steps: 4000,
       location: {
-        latitude: 0,
-        longitude: 0
+        latitude: 43.0446963,
+        longitude: 141.3542818
       }
     },
     {
@@ -29,8 +30,8 @@ function App() {
       points: 300,
       steps: 5000,
       location: {
-        latitude: 0,
-        longitude: 0
+        latitude: 43.1281718,
+        longitude: 141.364969
       }
     }
   ]
