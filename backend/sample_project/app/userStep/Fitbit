@@ -1,0 +1,16 @@
+import fitbit
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+import numpy as np
+
+def __init__(self, client_id, client_secret, access_token, refresh_token):
+    self.client_id = client_id
+    self.client_secret = client_secret
+    self.access_token = access_token
+    self.refresh_token = refresh_token
+    authd_client = fitbit.Fitbit(client_id, client_secret
+                             ,access_token=access_token, refresh_token=refresh_token)
+
+DATE = "2023-11-18"
+
