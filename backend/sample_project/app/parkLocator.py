@@ -4,7 +4,7 @@ import main
 
 url = "http://localhost:8000/sampleusers/sample"
 
-def getSpotByStep(latitude, longitude, stepCount,stepLength,spotType:
+def getSpotByStep(latitude, longitude, stepCount,stepLength,spotType):
     url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json"
     api_key = 'AIzaSyDQAj6Xy8ZDMAs_4K-1aI2jY1DetwJ6XoY'
 
