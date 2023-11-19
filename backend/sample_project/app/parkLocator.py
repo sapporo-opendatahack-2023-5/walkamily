@@ -1,9 +1,10 @@
 import requests
 import json
+import main
 
-url = "http://localhost:8080/sampleusers/sample"
+url = "http://localhost:8000/sampleusers/sample"
 
-def getSpotByStep(latitude, longitude, stepCount,stepLength=0.7, spotType='park'):
+def getSpotByStep(latitude, longitude, stepCount,stepLength,spotType:
     url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json"
     api_key = 'AIzaSyDQAj6Xy8ZDMAs_4K-1aI2jY1DetwJ6XoY'
 
@@ -12,6 +13,7 @@ def getSpotByStep(latitude, longitude, stepCount,stepLength=0.7, spotType='park'
     
     params = {
         'location': f"{latitude},{longitude}",
+        
         'radius': radius, #ユーザー指定
         'type': spotType,
         'key': api_key
@@ -26,6 +28,7 @@ def getSpotByStep(latitude, longitude, stepCount,stepLength=0.7, spotType='park'
         for result in results:
             spot = {
                 'name': result.get('name', ''),
+                'id': result.get('place_id', ''),
                 'location': {
                     'latitude': result.get('geometry', {}).get('location', {}).get('lat', ''),
                     'longitude': result.get('geometry', {}).get('location', {}).get('lng', '')
@@ -38,16 +41,16 @@ def getSpotByStep(latitude, longitude, stepCount,stepLength=0.7, spotType='park'
         print(f"Error: {response.status_code}")
         return None
 
+if __name__ == "__main__":
+    # 現在地の座標を札幌駅で仮定
+    userLatitude = 43.062096
+    userLongitude = 141.354376
+    userSettingStepCount = 5000
 
-# 現在地の座標を札幌駅で仮定
-userLatitude = 43.062096
-userLongitude = 141.354376
-userSettingStepCount = 5000
-
-res = requests.get(url,json)
-print(res)
+    res = requests.get(url,json)
+    print(res)
 
 
-parksNearUser = getSpotByStep(userLatitude, userLongitude, stepCount=userSettingStepCount)
+    parksNearUser = getSpotByStep(userLatitude, userLongitude, stepCount=userSettingStepCount)
 
-print(parksNearUser)
+    print(parksNearUser)
